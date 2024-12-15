@@ -1,0 +1,109 @@
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Definindo variáveis de cor */
+:root {
+    --background-color: #0b0c10;
+    --text-color: #fff;
+    --highlight-color: #f1c40f;
+}
+
+/* Estilos Globais */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+.header__title {
+    text-align: center;
+    padding: 20px;
+    font-size: 2.5em;
+    color: var(--highlight-color);
+}
+
+.main {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Estilizando o carrossel */
+.carousel {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    overflow: hidden;
+    margin-top: 50px;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    transition: transform 1s ease;
+}
+
+.carousel__card {
+    width: 250px;
+    height: 350px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.5s;
+    backface-visibility: hidden;
+}
+
+.carousel__card img {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+}
+
+.carousel__card:nth-child(1) {
+    transform: rotateY(0deg) translateZ(300px);
+}
+
+.carousel__card:nth-child(2) {
+    transform: rotateY(60deg) translateZ(300px);
+}
+
+.carousel__card:nth-child(3) {
+    transform: rotateY(120deg) translateZ(300px);
+}
+
+/* Estilizando a seção 'Sobre' */
+.about {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.about h2 {
+    font-size: 2em;
+    color: var(--highlight-color);
+}
+
+.about p {
+    font-size: 1.2em;
+}
+
+/* Estilo para o vídeo */
+.video {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.video h2 {
+    font-size: 2em;
+    color: var(--highlight-color);
+}
+
+/* Estilizando o rodapé */
+.footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #1c1c1c;
+}
